@@ -1,4 +1,5 @@
 import AICoach from "@/components/Home/AICoach/AiCoach";
+import { FAQAThink } from "@/components/Home/faqthnik/FaqThink";
 import HeroBanner from "@/components/Home/hero-banner/HeroBanner";
 import CoursesSection from "@/components/Home/ourCourse/OurCours";
 import Navbar from "@/components/shared/navbar/navbar";
@@ -11,6 +12,7 @@ export default function Home() {
             <HeroBanner/>
             <AICoach/>
             <CoursesSection/>
+            <FAQAThink/>
          </div>
       </div>
   );
