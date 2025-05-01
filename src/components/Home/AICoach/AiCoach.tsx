@@ -21,7 +21,7 @@ export default function AICoach() {
           <h1 className="text-3xl md:text-[60px] font-medium">Take a Suggestion Coaching</h1>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 md:gap-6">
           {/* Chat Section - Takes up 2/3 on large screens */}
           <Card className="lg:col-span-2 bg-white rounded-lg overflow-hidden">
             <CardHeader className="bg-gray-50 p-4">
@@ -139,7 +139,7 @@ export default function AICoach() {
                 <CardTitle className="text-[32px] font-bold">Quick Actions</CardTitle>
               </CardHeader>
               <CardContent className=" pt-0">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 gap-4">
                   <Button variant="outline" className="h-auto  flex flex-col items-start justify-center gap-2">
                   <Image src={cript.src} alt="cript"  width={30} height={30} />
                     <span className="text-[18px] font-semibold">Generate Script</span>
