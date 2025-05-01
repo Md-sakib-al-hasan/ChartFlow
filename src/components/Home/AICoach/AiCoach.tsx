@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { BarChart3, Copy, MessageSquare, RefreshCw, Send, ThumbsDown, ThumbsUp, Volume2, FileText } from "lucide-react"
+import { BarChart3, Copy, RefreshCw, Send, ThumbsDown, ThumbsUp, Volume2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Avatar } from "@/components/ui/avatar"
@@ -37,7 +37,7 @@ export default function AICoach() {
                     </Avatar>
                     <div className="bg-gray-100 rounded-lg p-3 max-w-[85%]">
                       <p className="text-sm">
-                        Hello! I'm your AI sales coach. How can I help you improve your sales performance today?
+                        {`Hello! I'm your AI sales coach. How can I help you improve your sales performance today?`}
                       </p>
                     </div>
                   </div>

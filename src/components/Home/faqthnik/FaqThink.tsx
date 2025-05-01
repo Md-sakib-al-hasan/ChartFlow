@@ -31,32 +31,17 @@ const faqs: FAQItem[] = [
   },
 ]
 
-const testimonials = [
-  {
-    id: "01",
-    quote:
-      "They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. Their creative ideas and cutting-edge techniques have helped us stay ahead of the competition.",
-    author: "Michael Kaizer",
-    position: "CEO of Basecamp Corp",
-  },
-  // Add more testimonials as needed
-]
+
 
 export function FAQAThink() {
   const [openItem, setOpenItem] = useState<string>("01")
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
+
 
   const toggleItem = (id: string) => {
     setOpenItem(openItem === id ? "" : id)
   }
 
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+  
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -66,7 +51,9 @@ export function FAQAThink() {
         </div>
         <div>
           <h3 className="lg:text-[60px] md:text-[30px] font-medium mb-12 text-center">
-            Constant collaboration is how we roll. Let's see if we are a good fit.
+            {
+                `Constant collaboration is how we roll. Let's see if we are a good fit.`
+            }
           </h3>
         </div>
       </div>

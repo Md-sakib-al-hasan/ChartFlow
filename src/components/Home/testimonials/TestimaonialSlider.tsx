@@ -58,11 +58,11 @@ export default function TestimonialSlider() {
     setIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
   };
 
-  const { quote, name, title, avatar } = testimonials[index];
+  const { quote, name, title } = testimonials[index];
 
   return (
     <div className="container mx-auto p-4">
-      <p className="text-xl md:text-2xl lg:text-[30px] mb-8">"{quote}"</p>
+      <p className="text-xl md:text-2xl lg:text-[30px] mb-8">{quote}</p>
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
         <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
