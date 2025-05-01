@@ -1,16 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Manrope, Plus_Jakarta_Sans, Poppins, Questrial, Lato, Be_Vietnam_Pro,Inter,Geist } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const geistSans = Geist({variable: "--font-geist-sans",subsets: ["latin"],});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const manrope = Manrope({subsets: ["latin"],display: "swap", });
+
+const plusJakartaSans = Plus_Jakarta_Sans({variable: "--font-plus-jakarta",subsets: ["latin"],display: "swap",});
+
+const poppins = Poppins({  weight: ['500'], subsets: ["latin"], variable: "--font-poppins", display: "swap" });
+
+const questrial = Questrial({weight:['400'], subsets: ["latin"], variable: "--font-questrial", display: "swap" });
+
+const lato = Lato({ subsets: ["latin"], variable: "--font-lato", display: "swap", weight: ["400", "700","100","300","900"] });
+
+const beVietnam = Be_Vietnam_Pro({weight:["500"], subsets: ["latin"], variable: "--font-bevietnam", display: "swap" });
+
+const inter = Inter({weight:["300"], subsets: ["latin"], variable: "--font-inter", display: "swap" });
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,8 +33,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`
+          ${geistSans.variable}
+          ${poppins.variable} 
+          ${questrial.variable}  
+          ${manrope.className} 
+          ${plusJakartaSans.variable} 
+          ${lato.variable}
+          ${beVietnam.variable}
+          ${inter.variable}
+           antialiased`}
+
         extension-installed="true"
+        
       >
         {children}
       </body>
