@@ -44,7 +44,7 @@ export default function RootLayout({
           ${inter.variable}
            antialiased`}
 
-        extension-installed="true"
+          extension-installed="true"
         
       >
         {children}
