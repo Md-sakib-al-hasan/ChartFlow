@@ -1,6 +1,7 @@
 import AICoach from "@/components/Home/AICoach/AiCoach";
 import { FAQAThink } from "@/components/Home/faqthnik/FaqThink";
 import HeroBanner from "@/components/Home/hero-banner/HeroBanner";
+import NewsletterSubscription from "@/components/Home/newsleter/NewsLetter";
 import CoursesSection from "@/components/Home/ourCourse/OurCours";
 import Navbar from "@/components/shared/navbar/navbar";
 
@@ -13,6 +14,7 @@ export default function Home() {
             <AICoach/>
             <CoursesSection/>
             <FAQAThink/>
+            <NewsletterSubscription/>
          </div>
       </div>
   );
