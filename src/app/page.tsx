@@ -3,6 +3,7 @@ import { FAQAThink } from "@/components/Home/faqthnik/FaqThink";
 import HeroBanner from "@/components/Home/hero-banner/HeroBanner";
 import NewsletterSubscription from "@/components/Home/newsleter/NewsLetter";
 import CoursesSection from "@/components/Home/ourCourse/OurCours";
+import TestimonialSlider from "@/components/Home/testimonials/TestimaonialSlider";
 import Footer from "@/components/shared/footer/Footer";
 import Navbar from "@/components/shared/navbar/navbar";
 
@@ -15,7 +16,8 @@ export default function Home() {
             <AICoach/>
             <CoursesSection/>
             <FAQAThink/>
-            <NewsletterSubscription/>
+            <TestimonialSlider/>
+            <NewsletterSubscription/> 
          </div>
          <Footer/>
       </div>

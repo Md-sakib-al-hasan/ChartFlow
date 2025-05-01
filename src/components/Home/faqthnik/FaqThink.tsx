@@ -97,37 +97,7 @@ export function FAQAThink() {
         ))}
       </div>
 
-      <div className="mt-16">
-        <blockquote className="text-xl md:text-2xl lg:text-[30px] mb-8">"{testimonials[currentTestimonial].quote}"</blockquote>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
-            <div>
-              <p className="font-medium">{testimonials[currentTestimonial].author}</p>
-              <p className="text-sm text-gray-500">{testimonials[currentTestimonial].position}</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={prevTestimonial}
-              className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center"
-              aria-label="Previous testimonial"
-            >
-              <span className="sr-only">Previous</span>←
-            </button>
-            <span className="text-sm">
-              {String(currentTestimonial + 1).padStart(2, "0")}/{String(testimonials.length).padStart(2, "0")}
-            </span>
-            <button
-              onClick={nextTestimonial}
-              className="w-10 h-10 bg-blue-900 text-white rounded-full flex items-center justify-center"
-              aria-label="Next testimonial"
-            >
-              <span className="sr-only">Next</span>→
-            </button>
-          </div>
-        </div>
-      </div>
+     
     </div>
   )
 }
