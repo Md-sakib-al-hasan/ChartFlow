@@ -4,48 +4,48 @@ import React, { useState } from 'react';
 const testimonials = [
   {
     quote:
-      'They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. Their creative ideas and cutting-edge techniques have helped us stay ahead of the competition.',
-    name: 'Michael Kaizer',
-    title: 'CEO of Basecamp Corp',
-    avatar: '/avatar-placeholder.png', // Replace with real image path
+      "The team's dedication and expertise helped us triple our online engagement within just a few months. Their insights are data-driven and incredibly effective.",
+    name: 'Sophia Martinez',
+    title: 'Marketing Director at NovaTech',
+    avatar: '/avatars/sophia.png',
   },
   {
     quote:
-      'They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. Their creative ideas and cutting-edge techniques have helped us stay ahead of the competition.',
-    name: 'Michael Kaizer',
-    title: 'CEO of Basecamp Corp',
-    avatar: '/avatar-placeholder.png', // Replace with real image path
+      "They understand our brand better than we do! Their campaigns always hit the mark and generate impressive results.",
+    name: 'James O’Connor',
+    title: 'CEO of Horizon Group',
+    avatar: '/avatars/james.png',
   },
   {
     quote:
-      'They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. Their creative ideas and cutting-edge techniques have helped us stay ahead of the competition.',
-    name: 'Michael Kaizer',
-    title: 'CEO of Basecamp Corp',
-    avatar: '/avatar-placeholder.png', // Replace with real image path
+      "We've worked with several agencies, but none have delivered the consistent ROI that this team has. Highly recommended.",
+    name: 'Aisha Rahman',
+    title: 'Head of Growth at Clarity Health',
+    avatar: '/avatars/aisha.png',
   },
   {
     quote:
-      'They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. Their creative ideas and cutting-edge techniques have helped us stay ahead of the competition.',
-    name: 'Michael Kaizer',
-    title: 'CEO of Basecamp Corp',
-    avatar: '/avatar-placeholder.png', // Replace with real image path
+      "Their creative approach to digital marketing helped us stand out in a crowded market. They bring fresh ideas to the table every time.",
+    name: 'Liam Chen',
+    title: 'Founder of UrbanNest Interiors',
+    avatar: '/avatars/liam.png',
   },
   {
     quote:
-      'They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. Their creative ideas and cutting-edge techniques have helped us stay ahead of the competition.',
-    name: 'Michael Kaizer',
-    title: 'CEO of Basecamp Corp',
-    avatar: '/avatar-placeholder.png', // Replace with real image path
+      "From content strategy to paid ads, they’ve completely transformed our online presence. It’s been a game-changer for our business.",
+    name: 'Emily Johnson',
+    title: 'CMO of EcoWear Apparel',
+    avatar: '/avatars/emily.png',
   },
   {
     quote:
-      'They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. Their creative ideas and cutting-edge techniques have helped us stay ahead of the competition.',
-    name: 'Michael Kaizer',
-    title: 'CEO of Basecamp Corp',
-    avatar: '/avatar-placeholder.png', // Replace with real image path
+      "Their team is highly communicative and results-driven. We saw a 40% boost in lead generation after just one campaign.",
+    name: 'Carlos Mendes',
+    title: 'VP of Sales at FinScope',
+    avatar: '/avatars/carlos.png',
   },
-  // Add more testimonials here if needed
 ];
+
 
 export default function TestimonialSlider() {
   const [index, setIndex] = useState(0);

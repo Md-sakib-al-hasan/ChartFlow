@@ -12,6 +12,15 @@ import Image from "next/image"
 
 export default function AICoach() {
   const [message, setMessage] = useState("")
+  const [messageList, setMessageList] = useState<{req:string, res:string}[]>([
+    {req: "Hi", res: "Hello, how can I help you today?"}
+  ])
+
+  const handleSubmit = () => {
+    setMessageList([...messageList,{req: message, res: "server Response"}])
+    
+    setMessage("")
+  }
 
   return (
     <div className="w-full  bg-blue-800 p-4 md:p-8">
@@ -23,7 +32,7 @@ export default function AICoach() {
 
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 md:gap-6">
           {/* Chat Section - Takes up 2/3 on large screens */}
-          <Card className="lg:col-span-2 bg-white rounded-lg overflow-hidden">
+          <Card className="lg:col-span-2 bg-white rounded-lg overflow-scroll max-h-[600px] ">
             <CardHeader className="bg-gray-50 p-4">
               <CardTitle className="text-base font-medium">AI Sales Coach</CardTitle>
             </CardHeader>
@@ -31,16 +40,31 @@ export default function AICoach() {
               <div className="flex flex-col h-full">
                 {/* Chat Messages */}
                 <div className="flex-1 p-4 min-h-[300px] md:min-h-[300px] overflow-y-auto">
-                  <div className="flex gap-3 mb-4">
-                    <Avatar className="h-8 w-8 bg-gray-200">
-                      <div className="rounded-full bg-gray-200 h-full w-full" />
-                    </Avatar>
-                    <div className="bg-gray-100 rounded-lg p-3 max-w-[85%]">
-                      <p className="text-sm">
-                        {`Hello! I'm your AI sales coach. How can I help you improve your sales performance today?`}
-                      </p>
-                    </div>
-                  </div>
+                 {
+                   messageList.map((meeage,inex) => 
+                   <div key={inex}>
+                     <div  className="flex justify-end gap-3 mb-4">
+                   <Avatar className="h-8 w-8 bg-gray-200">
+                     <div className="rounded-full bg-gray-200 h-full w-full" />
+                   </Avatar>
+                   <div className="bg-gray-100 rounded-lg p-3 max-w-[85%]">
+                     <p className="text-sm">
+                       {meeage.req}
+                     </p>
+                   </div>
+                 </div>
+                    <div  className="flex justify-start gap-3 mb-4">
+                   <Avatar className="h-8 w-8 bg-gray-200">
+                     <div className="rounded-full bg-gray-200 h-full w-full" />
+                   </Avatar>
+                   <div className="bg-gray-100 rounded-lg p-3 max-w-[85%]">
+                     <p className="text-sm">
+                       {meeage.res}
+                     </p>
+                   </div>
+                 </div>
+                   </div>    )
+                 }
                 </div>
 
                 {/* Quick Suggestion Buttons */}
@@ -60,7 +84,7 @@ export default function AICoach() {
                 </div>
 
                 {/* Input Area */}
-                <div className="border-t p-3 flex items-center">
+                <div className=" border-t p-3 flex items-center">
                   <input
                     type="text"
                     placeholder="Ask anything you need..."
@@ -68,7 +92,7 @@ export default function AICoach() {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                   />
-                  <Button size="sm" className="bg-blue-800 hover:bg-blue-700 ml-2 p-5 flex items-center gap-1">
+                  <Button onClick={handleSubmit} size="sm" className="bg-blue-800 hover:bg-blue-700 ml-2 p-5 flex items-center gap-1">
                     Send
                     <Send className="h-3 w-3 ml-1" />
                   </Button>
