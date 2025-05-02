@@ -10,6 +10,14 @@ import cript from "@/assets/cript.png"
 import practices from "@/assets/practices.png"
 import Image from "next/image"
 
+const suggestMessage = [
+  "How do I handle objections?",
+  "How do I handle objections?",
+  "Give me a cold email template",
+  "Closing techniques",
+  " Negotiation tips"
+]
+
 export default function AICoach() {
   const [message, setMessage] = useState("")
   const [messageList, setMessageList] = useState<{req:string, res:string}[]>([
@@ -69,18 +77,13 @@ export default function AICoach() {
 
                 {/* Quick Suggestion Buttons */}
                 <div className="border-t p-3 flex flex-wrap gap-2">
-                  <Button variant="outline" size="sm" className="text-xs rounded-full bg-gray-100 border-gray-200">
-                    How do I handle objections?
-                  </Button>
-                  <Button variant="outline" size="sm" className="text-xs rounded-full bg-gray-100 border-gray-200">
-                    Give me a cold email template
-                  </Button>
-                  <Button variant="outline" size="sm" className="text-xs rounded-full bg-gray-100 border-gray-200">
-                    Closing techniques
-                  </Button>
-                  <Button variant="outline" size="sm" className="text-xs rounded-full bg-gray-100 border-gray-200">
-                    Negotiation tips
-                  </Button>
+                  {
+                    suggestMessage.map((message,index) => <Button key={index} onClick={() => setMessage(message)} variant="outline" size="sm" className="text-xs rounded-full bg-gray-100 border-gray-200">
+                    {message}
+                  </Button> )
+                  }
+                 
+                
                 </div>
 
                 {/* Input Area */}
