@@ -1,4 +1,4 @@
-# Bicycle Website
+# ChatFlow
 
 This project is a modern, responsive landing page for an AI-powered web application. Built using the latest web technologies, the site features a pixel-perfect design based on a provided Figma file and includes an interactive chat interface. The layout is fully responsive across devices, making it accessible and user-friendly on mobile, tablet, and desktop.
 
